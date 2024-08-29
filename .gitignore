@@ -24,3 +24,133 @@ TestResults.xml
 .venv/
 pyvenv.cfg
 .__pycache__
+.build/
+.dist/
+.out/
+.env
+.logs/
+.tmp/
+.venv/
+.cache/
+
+# Docker-spezifische Dateien
+
+# Docker Compose Override und Umgebungsdateien
+docker-compose.override.yml
+.env
+.env.*
+
+# Docker Container Logs und Runtime-Daten
+*.log
+docker.log
+**/logs/
+docker-compose*.log
+*.pid
+
+# Build- und Cache-Verzeichnisse
+**/docker_build/
+**/cache/
+**/tmp/
+**/temp/
+**/build/
+**/dist/
+
+# Backup- und temporäre Dockerfiles
+Dockerfile.*.backup
+Dockerfile.*.old
+Dockerfile.*.tmp
+Dockerfile.*.bak
+Dockerfile.*.swp
+
+# Docker-Metadata und Layer-Caches
+**/.docker/
+**/.dockerignore
+**/docker.sock
+
+# Python-spezifische Dateien
+
+# Virtuelle Umgebungen
+**/.venv/
+**/venv/
+**/ENV/
+**/env/
+**/env.bak/
+**/.env/
+
+# Bytecode-Dateien
+*.pyc
+*.pyo
+__pycache__/
+**/__pycache__/
+*.pyd
+
+# Eier- und Paketverzeichnisse
+*.egg
+*.egg-info/
+**/*.egg-info/
+**/eggs/
+**/lib/
+**/lib64/
+**/parts/
+**/sdist/
+**/var/
+**/wheels/
+**/.eggs/
+**/.cache/
+
+# Test- und Coverage-Daten
+.coverage
+.tox/
+htmlcov/
+**/htmlcov/
+**/.pytest_cache/
+nosetests.xml
+coverage.xml
+*.cover
+**/.hypothesis/
+.mypy_cache/
+.dmypy.json
+.pyre/
+
+# Distribution/Bundling
+dist/
+build/
+*.manifest
+*.spec
+
+# IDE/Editor-spezifische Dateien
+.idea/
+.vscode/
+.pydevproject
+*.sublime-workspace
+*.sublime-project
+
+# Pip-Benutzerdateien
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Jupyter Notebook Checkpoints
+**/.ipynb_checkpoints
+
+# Python Package Index (pip) wheel files
+*.whl
+
+# Lokale Konfigurationsdateien
+**/.env.local
+**/.env.*.local
+**/.envrc
+
+# Zusätzliche allgemeine ignorierbare Dateien
+
+# Editor-Spezifische temporäre Dateien
+*~
+*.swp
+.DS_Store
+
+# Betriebssystemspezifische Dateien
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+.AppleDouble
+.LSOverride
