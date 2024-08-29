@@ -1,10 +1,9 @@
 from fastapi import APIRouter, Depends
-from services.nlp_service import get_nlp_service
-from models.nlp_models import NLPRequest, NLPResponse
+from api.dependencies import get_nlp_service
 
-router = APIRouter()
+api_router = APIRouter()
 
-@router.post("/analyze", response_model=NLPResponse)
-def analyze_text(request: NLPRequest, nlp_service = Depends(get_nlp_service)):
-    result = nlp_service.analyze_text(request.text)
-    return NLPResponse(result=result)
+@api_router.get("/analyze/")
+def analyze_text(text: str, nlp_service = Depends(get_nlp_service)):
+    result = nlp_service.analyze(text)
+    return {"analysis": result}

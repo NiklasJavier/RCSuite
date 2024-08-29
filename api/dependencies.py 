@@ -1,0 +1,4 @@
+from services.nlp_service import NLPService
+
+def get_nlp_service():
+    return NLPService()

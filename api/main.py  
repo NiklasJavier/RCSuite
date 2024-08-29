@@ -1,9 +1,18 @@
 from fastapi import FastAPI
-from myapi.routes import router  # Absolute import1
+from api.routes import api_router
+from api.middleware import add_custom_middleware
 
-app = FastAPI()
+app = FastAPI(title="RegulusCloudBotSuite API")
 
-app.include_router(router)
+# Add custom middleware for logging, auth, etc.
+add_custom_middleware(app)
+
+# Include API routes
+app.include_router(api_router)
+
+@app.get("/")
+def read_root():
+    return {"message": "Welcome to RegulusCloudBotSuite API"}
 
 if __name__ == "__main__":
     import uvicorn

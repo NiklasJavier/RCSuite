@@ -1,7 +1,8 @@
 from pydantic import BaseModel
 
-class NLPRequest(BaseModel):
+class TextAnalysisRequest(BaseModel):
     text: str
 
-class NLPResponse(BaseModel):
-    result: list
+class TextAnalysisResponse(BaseModel):
+    word_count: int
+    text_length: int
