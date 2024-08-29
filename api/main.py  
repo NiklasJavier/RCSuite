@@ -1,19 +1,10 @@
-from fastapi import FastAPI
-from api.routes import api_router
-from api.middleware import add_custom_middleware
+from services.nlp_service import NLPService
 
-app = FastAPI(title="RegulusCloudBotSuite API")
-
-# Add custom middleware for logging, auth, etc.
-add_custom_middleware(app)
-
-# Include API routes
-app.include_router(api_router)
-
-@app.get("/")
-def read_root():
-    return {"message": "Welcome to RegulusCloudBotSuite API"}
+def main():
+    nlp_service = NLPService()
+    text = "This is a sample text for analysis."
+    result = nlp_service.analyze(text)
+    print("NLP Analysis Result:", result)
 
 if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    main()
