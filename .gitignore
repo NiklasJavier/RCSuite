@@ -20,3 +20,6 @@ rad.json
 *.flf
 #Test results file
 TestResults.xml
+#Python ENV folder/ files
+.venv/
+pyvenv.cfg
