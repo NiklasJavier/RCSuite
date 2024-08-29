@@ -1,0 +1,11 @@
+fastapi==0.95.0          # FastAPI framework for building APIs
+uvicorn[standard]==0.22.0 # ASGI server for FastAPI
+spacy==3.5.0             # NLP processing library
+pydantic==1.10.5         # Data validation and settings management using Python type annotations
+SQLAlchemy==2.0.6        # SQL toolkit and Object-Relational Mapping (ORM)
+alembic==1.10.4          # Database migrations tool for SQLAlchemy
+httpx==0.24.0            # HTTP client for making requests to external services
+python-jose==3.3.0       # JWT token handling for authentication
+loguru==0.7.0            # Logging library for easier logging setup
+pytest==7.4.0            # Testing framework for running unit and integration tests
+pytest-asyncio==0.21.0   # Pytest plugin for testing asyncio code
